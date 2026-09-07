@@ -1,0 +1,21 @@
+{
+  "name": "marketplace-gateway-handoff",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test test/handoff_decision.test.ts",
+    "serve": "tsx src/listing_router.ts",
+    "rewrite": "tsx src/rewrite_listing.ts"
+  },
+  "dependencies": {
+    "openai": "^4.60.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4"
+  }
+}

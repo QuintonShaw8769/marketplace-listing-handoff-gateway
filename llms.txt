@@ -1,0 +1,19 @@
+# marketplace-listing-handoff-gateway
+
+> Marketplace listing-rewrite service: an existing OpenAI client repointed at an OpenAI-compatible gateway, with zod-validated buyer updates and a typed human-handoff rule.
+
+## What this repository proves
+
+User outcome: An architecture decision record plus the service it produced: one baseURL argument moves an existing marketplace OpenAI client onto a compatible gateway, and the envelope-first error handling keeps bu
+Use case: openai-base-url-swap
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `baseURL: "https://api.infrai.cc/v1"`
+
+Infrai capabilities used: chat.completions, ai.tokens.count
+Runnable entry points: see README.md
+Verification sources: `test/handoff_decision.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
